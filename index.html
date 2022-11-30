@@ -4,6 +4,7 @@
 
     <!-- <audio autoplay="autoplay" id="audio" muted><source src="static/bgm.mp3" type="audio/mpeg"></audio> -->
         <audio id="audio" muted autoplay="autoplay" preload="preload" src="static/bgm.mp3"  ></audio>
+        <audio id="audio1" muted autoplay="autoplay" preload="preload" src="http://music.163.com/song/media/outer/url?id=1366216050.mp3"  ></audio>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,9 +14,9 @@
     <link rel="stylesheet" type="text/css" href="static/card.css"/>
     <link rel="icon" type="image/x-ico" href="static/cake.ico" />
     <link rel="stylesheet" type="text/css" href="static/font.css"/>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 
+<!--     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 
             src="http://music.163.com/outchain/player?type=2&id=1366216050&auto=0&height=66" 
-            style="top:0px;position:absolute;z-index:2;left:0px"></iframe>
+            style="top:0px;position:absolute;z-index:2;left:0px"></iframe> -->
 
     <title>HappyBirthday</title>
 </head>
@@ -70,7 +71,7 @@
                 <p>     良辰吉时时时有</p>
                 <p>     锦瑟年华岁岁拥</p>
                 <p class="text-right">万事胜意</p>
-                <p class="text-right">♥dear</p>
+                <p id="dear" class="text-right">♥dear</p>
             </div>
 
         </div>
@@ -84,6 +85,12 @@
   but.addEventListener('click', function() {
     audio.muted = false;
     audio.play();
+  });
+  dear.addEventListener('click', function() {
+    audio.muted = true;
+    audio1.muted = false;
+    audio1.play();
+
   });
       
 </script>
